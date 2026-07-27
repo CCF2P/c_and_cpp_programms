@@ -1,0 +1,3 @@
+SELECT *
+FROM images
+LIMIT 5;
