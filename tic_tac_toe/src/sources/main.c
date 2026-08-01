@@ -1,8 +1,7 @@
-#include "sources/tic_tac_toe.c"
+#include "tic_tac_toe.h"
 
-
-int main(void)
+int main(int argc, char *argv[])
 {
-    game();  
-    return 0;
+  game(3);
+  return 0;
 }
