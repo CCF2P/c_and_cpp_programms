@@ -70,7 +70,6 @@ struct Board
   char *board; // 1D array
 };
 
-void draw_vertical_lines(int start_x, int start_y);
 void draw_horizontal_lines_top(int start_x, int start_y);
 void draw_horizontal_lines_middle(int start_x, int start_y);
 void draw_horizontal_middle_board(int start_x, int start_y, int row);

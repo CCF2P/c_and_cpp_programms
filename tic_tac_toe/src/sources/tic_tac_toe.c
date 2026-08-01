@@ -97,38 +97,34 @@ void move_cursor(unsigned x, unsigned y)
   move_cursor_(x, y);
 }
 
-void draw_vertical_lines(int start_x, int start_y)
-{
-  for (int i = 0; i < BOARD.size; ++i) {
-    move_cursor(start_x + i, start_y);
-    printf(l_vertical);
-  }
-}
-
 void draw_horizontal_lines_top(int start_x, int start_y)
 {
   move_cursor(start_x, start_y);
   printf(l_down_right);
+  CURSOR.x += 1;
   for (int i = 0; i < BOARD.size; ++i) {
     printf(l_horizontal);
     printf(l_horizontal_down);
     CURSOR.x += 2;
   }
-  move_cursor(CURSOR.x, CURSOR.y);
+  move_cursor(CURSOR.x - 1, CURSOR.y);
   printf(l_down_left);
+  CURSOR.x += 1;
 }
 
 void draw_horizontal_lines_middle(int start_x, int start_y)
 {
   move_cursor(start_x, start_y);
   printf(l_vertical_right);
+  CURSOR.x += 1;
   for (int i = 0; i < BOARD.size; ++i) {
     printf(l_horizontal);
     printf(l_verctical_horizontal);
     CURSOR.x += 2;
   }
-  move_cursor(CURSOR.x, CURSOR.y);
+  move_cursor(CURSOR.x - 1, CURSOR.y);
   printf(l_vertical_left);
+  CURSOR.x += 1;
 }
 
 void draw_horizontal_middle_board(int start_x, int start_y, int row)
@@ -140,19 +136,22 @@ void draw_horizontal_middle_board(int start_x, int start_y, int row)
   }
   move_cursor(CURSOR.x, CURSOR.y);
   printf(l_vertical);
+  CURSOR.x += 1;
 }
 
 void draw_horizontal_lines_bottom(int start_x, int start_y)
 {
   move_cursor(start_x, start_y);
   printf(l_up_right);
+  CURSOR.x += 1;
   for (int i = 0; i < BOARD.size; ++i) {
     printf(l_horizontal);
     printf(l_horizontal_up);
     CURSOR.x += 2;
   }
-  move_cursor(CURSOR.x, CURSOR.y);
+  move_cursor(CURSOR.x - 1, CURSOR.y);
   printf(l_up_left);
+  CURSOR.x += 1;
 }
 
 void draw_board()
