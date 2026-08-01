@@ -40,14 +40,14 @@ static void init_terminal(void) {}
 #define set_display_atrib(color) printf("\033[%dm", color)
 
 // Background Colours
-#define B_BLACK 	40
-#define B_RED		  41
-#define B_GREEN		42
-#define B_YELLOW	43
-#define B_BLUE		44
+#define B_BLACK   40
+#define B_RED     41
+#define B_GREEN   42
+#define B_YELLOW  43
+#define B_BLUE    44
 #define B_MAGENTA 45
-#define B_CYAN		46
-#define B_WHITE		47
+#define B_CYAN    46
+#define B_WHITE   47
 
 // Text colors
 #define F_RED    31
